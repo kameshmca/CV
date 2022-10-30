@@ -1,0 +1,875 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>NJVS Technologies</title>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Parallax Content Slider with CSS3 and jQuery" />
+        <meta name="keywords" content="slider, animations, parallax, delayed, easing, jquery, css3, kendo UI" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link href='http://fonts.googleapis.com/css?family=Economica:700,400italic' rel='stylesheet' type='text/css'>
+		<noscript>
+		<link rel="stylesheet" type="text/css" href="css/nojs.css" />
+		</noscript>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <!-- Font awesome -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!-- Customise -->
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/customize.css" rel="stylesheet">
+	<link href="css/style2.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!--<link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+--></head><!--/head-->
+
+
+<style>
+
+.intro {
+  font-size: 1.25em;
+}
+.js .panel-title {
+  margin: 0;
+}
+.panel-title a {
+  border-bottom: none;
+  color: #fff !important;
+  display: block;
+  padding: 0.7em 0.7em;
+  position: relative;
+  text-decoration: none;
+  -webkit-transition: color 200ms ease 0s;
+  -moz-transition: color 200ms ease 0s;
+  transition: color 200ms ease 0s;
+  width: 100%;
+  background: #15A2FF; /* Old browsers */
+  margin-bottom:2%;
+  border-radius: 3px; 
+  font-size: 20px;
+}
+.panel-title a .icon {
+  color: #9e9e9e;
+  position: absolute;
+  right: 0;
+  padding-right:5px;
+  -webkit-transition: all 200ms ease 0s;
+  -moz-transition: all 200ms ease 0s;
+  transition: all 200ms ease 0s;
+}
+.panel-title a:hover,
+.panel-title a:focus {
+  color: #1119B5 !important;
+}
+.panel-title a:hover .icon,
+.panel-title a:focus .icon {
+  color: #ec407a;
+}
+.panel-title a.active {
+  color: #37474f;
+}
+.panel-title a.active .icon {
+  color: #ec407a;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.js .accordion {
+/*  border-bottom: 1px solid #ececec;
+*/  margin: 2em 0;
+}
+.accordion .panel-title a {
+/*  border-top: 1px solid #ececec;
+*/}
+[id^="panel-"] {
+  padding-bottom: 2em;
+}
+.panel-content{
+	background: #fff;
+	padding: 10px;
+	color: #666;
+	border-radius: 3px;
+}
+/*imagerotation start*/
+.image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 250px;
+    margin:-60px 0 0 -60px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(-360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(-360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
+
+</style>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="0">
+	<!-- slider -->
+	<div class="container">
+			<div id="da-slider" class="da-slider">
+				<div class="da-slide">
+					<h2>NJVS TECHNOLOGIES</h2>
+					<p>We are in the business of teaching software classes at Dindigul. Our institution is run by a team of experts in the industry. NJVS Technologies is dedicated to producing high quality IT professionals. NJVS Technologies has a moral vision to nurture professionals of high academic calibre and perfect character.</p>
+					<div class="da-img"><img class="image" src="http://NJVStech.com/images/slider1.png" alt="" width="250" height="250"></div>
+				</div>
+				<div class="da-slide">
+					<h2>Software Development</h2>
+					<p>Software development is the computer programming, documenting, testing, and bug fixing involved in creating and maintaining applications and frameworks involved in a software release life cycle and resulting in a software product.</p>
+					<div class="da-img"><img src="images/slider2.png" alt="image01" /></div>
+				</div>
+				<div class="da-slide">
+					<h2>Web Development</h2>
+					<p>Web development is a broad term for the work involved in developing a web site for the Internet or an intranet. Web development can range from developing the simplest static single page of plain text to the most complex web-based internet applications, electronic businesses, and social network services</p>
+					<div class="da-img"><img src="images/slider3.png" alt="image01" /></div>
+				</div>
+				<div class="da-slide">
+					<h2>Project Training</h2>
+					<p>Project Training has specific goals of improving one's capability, capacity, productivity and performance.</p>
+					<div class="da-img"><img src="images/slider4.png" alt="image01" /></div>
+				</div>
+				<nav class="da-arrows">
+					<span class="da-arrows-prev"></span>
+					<span class="da-arrows-next"></span>				</nav>
+			</div>
+        </div>
+			<marquee behavior="scroll" direction="left" style="color:#FFFFFF;">
+			* OUR LATEST PROJECTS DOMAINS - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			* Datamining - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			* Networking & Network Security - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			* Mobile Computing - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			* Grid Computing - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			* Cryptography - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			* Image Processing -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			* Webservice - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			* Applications - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			* Multimedia -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			* Embedded Systems -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			* Power Electronics -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			* Matlab - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			* NS2 -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			* Oracle -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			* Android -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			* Cloud Computing - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			* AD-HOC Networks -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			* Neural Networks -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			* Artificial Intelligence -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			* Finger Print Authentication -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			* Client Server Technologies.......
+			</marquee>
+    <!--/slider-->
+    <!-- Navbar -->
+	<header id="header" role="banner">
+        <div class="container-fluid">
+            <div id="navbar" class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"></a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav index_menu">
+                        <li class="active"><a href="#da-slider"><i class="icon-home"></i></a></li>
+                        <li><a href="#about-us">About Us</a></li>
+                        <li><a href="#products">Projects</a></li>
+                        <li><a href="#markets">Trainings</a></li>
+                        <li><a href="#parts">Technologies</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+    </header>
+    <!-- what we do-->
+    <section id="about-us">
+        <div class="container-fluid box">
+            <div class="container ">
+            	<div class="icon_img"><img src="images/icons/a.png" class="img-responsive"></div>
+                <div class="center">
+                    <h2>What We Do</h2>
+                    <p class="lead" style="text-align:justify;">NJVS Technologies started with a dream , a dream that would make young minds to harness their potential the field of computer science. Started with a team of 2011, the team had grown in the midst of IT culture. The strong intellectual minds have been the pillar to a growth rate that had multiplied in the course of time and also continues to be the backbone of our dynamic culture. The Dindigul based IT hub has continued the serve the young minds with the latest of IEEE projects. The skilled energetic team of IT field experts impart their hard earned experience into the projects carried out NJVS.</p>
+                </div>
+                <div class="center col-md-6">
+                	<h2>Our Gallerys</h2><br/>
+					<div id="slider1_container" style="display: none; position: relative; margin: 0 auto; width: 1140px; height: 442px; overflow: hidden;">
+            <!-- Slides Container -->
+            <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1140px; height: 442px;
+            overflow: hidden;">
+                <div>
+                    <img u="image" src2="images/home/01.jpg" />
+                </div>
+                <div>
+                    <img u="image" src2="images/home/02.jpg" />
+                </div>
+                <div>
+                    <img u="image" src2="images/home/03.jpg" />
+                </div>
+                <div>
+                    <img u="image" src2="images/home/04.jpg" />
+                </div>
+            
+            <!--#region Bullet Navigator Skin Begin -->
+            <!-- Help: http://www.jssor.com/development/slider-with-bullet-navigator-jquery.html -->
+            <style>
+                /* jssor slider bullet navigator skin 05 css */
+                .jssorb05 {
+                    position: absolute;
+                }
+                .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+                    position: absolute;
+                    /* size of bullet elment */
+                    width: 16px;
+                    height: 16px;
+                    background: url(images/b05.png) no-repeat;
+                    overflow: hidden;
+                    cursor: pointer;
+                }
+                .jssorb05 div { background-position: -7px -7px; }
+                .jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
+                .jssorb05 .av { background-position: -67px -7px; }
+                .jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }
+            </style>
+            <!-- bullet navigator container -->
+            <div u="navigator" class="jssorb05" style="bottom: 16px; right: 6px;">
+                <!-- bullet navigator item prototype -->
+                <div u="prototype"></div>
+            </div>
+            <!--#endregion Bullet Navigator Skin End -->
+            <!--#region Arrow Navigator Skin Begin -->
+            <style>
+                /* jssor slider arrow navigator skin 11 css */
+                .jssora11l, .jssora11r {
+                    display: block;
+                    position: absolute;
+                    /* size of arrow element */
+                    width: 37px;
+                    height: 37px;
+                    cursor: pointer;
+                    background: url(images/a11.png) no-repeat;
+                    overflow: hidden;
+                }
+                .jssora11l { background-position: -11px -41px; }
+                .jssora11r { background-position: -71px -41px; }
+                .jssora11l:hover { background-position: -131px -41px; }
+                .jssora11r:hover { background-position: -191px -41px; }
+                .jssora11l.jssora11ldn { background-position: -251px -41px; }
+                .jssora11r.jssora11rdn { background-position: -311px -41px; }
+            </style>
+            <!-- Arrow Left -->
+            <span u="arrowleft" class="jssora11l" style="top: 123px; left: 8px;">
+            </span>
+            <!-- Arrow Right -->
+            <span u="arrowright" class="jssora11r" style="top: 123px; right: 8px;">
+            </span>
+            <!--#endregion Arrow Navigator Skin End -->
+            <a style="display: none" href="http://www.jssor.com">Bootstrap Slider</a>
+        </div>
+                </div><br/>
+				</div>
+                <div class="history_menu  col-md-6 col-xs-12">
+                <h3 class="text-center">Our Company</h3>
+                <div class="capability-menu col-md-8 col-xs-12" style="float: right; text-align:left;">
+                <p><a href="#">Best Software Training Institute in Dindigul</a></p>
+                <p><a href="#">Best Students Projects Institute in Dindigul</a></p>
+                <p><a href="#">Best CAD Training Institute in Dindigul</a></p>
+                <p><a href="#">Best Ns2/Ns3 Projects in Dindigul</a></p>
+                <p style="border:none;"><a href="#">Best Hardware & Networking Institute in Dindigul</a></p>
+                </div>
+                </div>
+                <!--<div class="gap"><img src="images/rippon.png" class="img-responsive"></div> -->
+                <!--/.carousel-->
+            </div><!--/.box-->
+        </div><!--/.container-->
+    </section><!--/#about-us-->
+    <div class="clearfix"></div>
+	<!-- products -->
+	<section id="products">
+    <div class="container-fluid pro_bg">
+    	<div class="container">
+         <div class="clearfix"></div>
+        <div class="icon_img"><img src="images/icons/pro.png" class="img-responsive"></div>
+        	<div class="row">
+            	<div class="projects-index">
+                	<div class="center ">
+                	<h2>Projects</h2><hr>
+                    </div>
+                    <div class="pro_images center">
+                        <a href="engineering.html"><p class="col-md-5 col-sm-11 col-xs-11">Engineering (IEEE)</p></a>
+                        <a href="arts.html"><p class="col-md-5 col-sm-11 col-xs-11">Arts&Science </p></a>
+                        <div class="clearfix"></div>
+                        <a href="diploma.html"><p class="col-md-5 col-sm-11v col-xs-11">Diploma </p></a>
+                        <a href="mba.html"><p class="col-md-5 col-sm-11  col-xs-11">MBA</p></a>
+                        <div class="clearfix"></div>
+                        <a href="mca.html"><p class="col-md-5 col-sm-11  col-xs-11">MCA</p></a>
+                        <a href="phd.html"><p class="col-md-5 col-sm-11  col-xs-11">Ph.D</p></a>
+                        <div class="clearfix"></div>
+                   </div>
+                </div>
+                <!--<div class="gap"><img src="images/rippon.png" class="img-responsive"></div> -->
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- markets -->
+	<section id="markets">
+    	<div class="container-fluid pro_bg">
+    	<div class="container">
+        <div class="icon_img"><img src="images/icons/m.png" class="img-responsive"></div>
+        	<div class="row">
+            	<div class="products-index">
+                	<div class="center ">
+                	<h2>Trainings</h2><hr>
+                    </div>
+                    <div class="pro_images center">
+                    	<section class="main">
+				<ul class="ch-grid1">
+					<li>
+						<div class="ch-item1">				
+							<div class="ch-info1">
+								<div class="ch-info-front1 ch-img-1"></div>
+								<div class="ch-info-back1">
+									<h3>Softwares</h3>
+									<a href="software.html">View</a>
+								</div>	
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="ch-item1">
+							<div class="ch-info1">
+								<div class="ch-info-front1 ch-img-2"></div>
+								<div class="ch-info-back1">
+									<h3>Hardware</h3>
+									<a href="hardware.html">View</a>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="ch-item1">
+							<div class="ch-info1">
+								<div class="ch-info-front1 ch-img-3"></div>
+								<div class="ch-info-back1">
+									<h3>CAD</h3>
+									<a href="cad.html">View</a>
+								</div>
+							</div>
+						</div>
+					</li>
+                    <li>
+						<div class="ch-item1">
+							<div class="ch-info1">
+								<div class="ch-info-front1 ch-img-4"></div>
+								<div class="ch-info-back1">
+									<h3>CNC Programming</h3>
+									<a href="cnc.html">View</a>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				
+			</section>
+                     <div class="clearfix"></div>
+                   </div>
+                </div>
+            </div>
+            <!--<div class="gap"><img src="images/rippon.png" class="img-responsive"></div> -->
+        </div>
+    </div>
+    </section>
+    <div class="clearfix"></div>
+    <!-- parts -->
+	<section id="parts">
+   		<div class="container-fluid pro_bg" style="padding-bottom: 90px;">
+    	<div class="container">
+        <div class="icon_img"><img src="images/icons/p.png" class="img-responsive"></div>
+        	<div class="row">
+            	<div class="products-index">
+                	<div class="center "><h2>Technologies</h2><hr></div>
+					   <div class="accordion col-md-4">
+                         <!-- Tap1 -->
+					  <h3 class="panel-title">Programing Languages</h3>
+                          <div class="panel-content">
+                          <div class="tech_support" style="text-align:center;">
+                            	<p style="font-family:Arial, Helvetica, sans-serif; font-size:20px;">C,</p>
+								<p style="font-family:Arial, Helvetica, sans-serif; font-size:20px;">C++,</p>
+								<p style="font-family:Arial, Helvetica, sans-serif; font-size:20px;">JAVA,</p>
+								<p style="font-family:Arial, Helvetica, sans-serif; font-size:20px;">J2EE,</p>
+								<p style="font-family:Arial, Helvetica, sans-serif; font-size:20px;">J2ME,</p>
+								<p style="font-family:Arial, Helvetica, sans-serif; font-size:20px;">.NET,</p>
+								<p style="font-family:Arial, Helvetica, sans-serif; font-size:20px;">PHP,</p>
+								<p style="font-family:Arial, Helvetica, sans-serif; font-size:20px;">ANDROID.</p>
+                            </div>
+				   </div>
+            </div>
+						<div class="accordion col-md-4">
+                         <!-- Tap2 -->
+					  <h3 class="panel-title">Database</h3>
+                          <div class="panel-content">
+                          <div class="tech_support" style="text-align:center;">
+                            	<p style="font-family:Arial, Helvetica, sans-serif; font-size:20px;">MS-Access,</p>
+								<p style="font-family:Arial, Helvetica, sans-serif; font-size:20px;">ORACLE,</p>
+								<p style="font-family:Arial, Helvetica, sans-serif; font-size:20px;">MY SQL,</p>
+								<p style="font-family:Arial, Helvetica, sans-serif; font-size:20px;">SYBASE.</p>
+                            </div>
+				   </div>
+            </div>
+						<div class="accordion col-md-4">
+                         <!-- Tap3 -->
+					  <h3 class="panel-title">Web Development</h3>
+                          <div class="panel-content">
+                          <div class="tech_support" style="text-align:center;">
+                            	<p style="font-family:Arial, Helvetica, sans-serif; font-size:20px;">ASP.NET,</p>
+								<p style="font-family:Arial, Helvetica, sans-serif; font-size:20px;">HTML/DHTML,</p>
+								<p style="font-family:Arial, Helvetica, sans-serif; font-size:20px;">JAVA SCRIPT,</p>
+								<p style="font-family:Arial, Helvetica, sans-serif; font-size:20px;">ACTIVEX,</p>
+								<p style="font-family:Arial, Helvetica, sans-serif; font-size:20px;">FLASH.</p>
+                            </div>
+                                
+				   </div>
+            </div>
+       				  </div>
+					</div>
+				</div>
+		    </div>
+    </section>
+    <!-- solutions -->
+    <div class="clearfix"></div>
+    <!--/#contact-->
+    <section id="contact">
+        <div class=" container-fluid box last">
+            <div class="container">
+            <div class="icon_img"><img src="images/icons/c.png" class="img-responsive"></div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h1>Contact Form</h1>
+                        <p>Please use this form to contact us with a general enquiry.</p>
+                        <div class="status alert alert-success" style="display: none"></div>
+							<form method="post" action="contact.php">
+								<div class="row">
+                                	<div class="col-sm-6">
+                                    <div class="form-group">
+        								<input name="sender" required placeholder="Name" class="form-control">
+									</div>
+									</div>
+                               		<div class="col-sm-6">
+                                    <div class="form-group">
+        								<input name="senderEmail" required placeholder="Email address" class="form-control">
+									</div>
+									</div>
+									</div>
+									<div class="row">
+                                	<div class="col-sm-12">
+                                    <div class="form-group">
+        								<input name="senderphonenumber" required placeholder="Mobile Number" class="form-control">
+									</div>
+									</div>
+									</div>
+								<div class="row">
+                                	<div class="col-sm-12">
+                                    <div class="form-group">
+        								<textarea rows="8" cols="20" name="message" required placeholder="Message" class="form-control"></textarea>
+									</div>
+									</div>
+                                        <input type="submit" name="submit" class="btn btn-danger btn-lg">
+								</div>
+    						</form>
+               		</div>
+					<!--/.col-sm-6-->
+                    <div class="col-sm-6">
+                        <h1>Our Address</h1>
+                        <div class="row" style="margin-top:35px;">
+                            <div class="col-md-6" style="text-align:left;">
+                                <address1>
+                                    <strong>NJVS Technologies</strong><br>
+                                    NO.8,Second Floor,<br>
+                                    Near Balaji Bhavan Hotel,<br>
+                                    Bus Stand,<br>
+                                    Dindigul-3.<br>
+									Office : 0451-2434303<br>
+									Cell : 96 986 22 777<br>
+                                </address1>
+                            </div>
+                            <div class="col-md-6"style="text-align:left;">
+                               <address2>
+							   <strong>Managing Directors</strong><br>
+							   Mr. N.Venkateshwaran<br>
+							   Cell : 95436 55557<br>
+							   Mr. N.Sathishwaran<br>
+							   Cell : 77 08 47 27 67<br>
+							   Email: <a href="NJVStechnologies@gmail.com" class="">NJVStechnologies@gmail.com</a> <br/>
+                   			   Website :<a href=" http://www.NJVStech.com" class="">www.NJVStech.com</a><br><br><br><br>
+							   </address2>
+                        </div>
+                        <h1>Connect with us</h1>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="social">
+                                    <li><a href="#"><i class="icon-facebook icon-social"></i> Facebook</a></li>
+                                    <li><a href="#"><i class="icon-google-plus icon-social"></i> Google Plus</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="social">
+                                    <li><a href="#"><i class="icon-twitter icon-social"></i> Twitter</a></li>
+                                    <li><a href="#"><i class="icon-youtube icon-social"></i> Youtube</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!--/.col-sm-6-->
+                    <div class="clearfix"></div>
+                    <div class="accordion col-md-10">
+                         <!-- Tap2 -->
+<!--						  <h3 class="panel-title">Technical Support</h3>
+                          <div class="panel-content">
+                          <div class="tech_support">
+                            	<p>With our broad range of product and industry expertise, we can help you with many of the day-to-day application problems which can arise.</p>
+                          		<h4>Aqua-Chem Customer Service Manager</h4>
+                                <p class="weight">Frank Keefer</p>
+                                <p>Phone: 6066014501</p>
+                                <p><a href="mailto:seawater@gmai.com" style="color: #666;">seawater@gmai.com</a></p>
+                                <h4>Our Technical Advisors provide technical support via phone and email and with Service Representative on-site visits. We are prepared to discuss the following subjects:</h4>
+                          		<p class="weight">Equipment design and features</p>
+                                <div class="list1">
+                                	<li>Process flows and operating characteristics</li>
+                                    <li>Process Control and PLC operation and monitoring</li>
+                                    <li>Operation</li>
+                                    <li>Develop System Enhancements</li>
+                                </div>
+                                <p class="weight">System and Equipment Training</p>
+                                <div class="list1">
+                                	<li>On-Site with your equipment</li>
+                                    <li>At the Factory with our Staff</li>
+                                </div>
+                                <p class="weight">Maintenance Programs for Customer Specific Requirements</p>
+                                <div class="list1">
+                                	<li>Evaluate Operating Data</li>
+                                    <li>Consult on Process Operations</li>
+                                    <li>Supervise periodic Preventative Maintenance During Shutdowns</li>
+                                </div>
+                                 <div class="clearfix"></div>
+                             <!--<div class="gen_enquiry col-md-8">
+                             	<h4>Contact Form</h4>
+                                <p>Please use this form to contact us with a general enquiry.</p>
+                                <p>Please note: a red asterisk (*) denotes a required field. </p>
+                                <form role="form">
+                                <div class="form-group col-md-6">
+                                    <label for="example">Name : <span class="has-error">*</span></label>
+                                    <input type="name" class="form-control">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="example">Company : <span class="has-error">*</span></label>
+                                    <input type="name" class="form-control">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="example">Country : <span class="has-error">*</span></label>
+                                    <input type="name" class="form-control">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="example">Phone Number : <span class="has-error">*</span></label>
+                                    <input type="name" class="form-control">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="example">Email : <span class="has-error">*</span></label>
+                                    <input type="name" class="form-control">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="example">I am interested in : <span class="has-error">*</span></label>
+                                   <select class="form-control">
+                                    <option> - Select - </option>
+                                      <option>New Unit Sales</option>
+                                      <option>Aftermarket Parts</option>
+                                      <option>Aftermarket Parts</option>
+                                      <option>Service</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="example">How did you hear about us? : <span class="has-error">*</span></label>
+                                    <select class="form-control">
+                                    <option> - Select - </option>
+                                      <option> Online Advertisement</option>
+                                      <option> Google Search</option>
+                                      <option> Industry Association</option>
+                                      <option> Word of mouth</option>
+                                      <option> Referral</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-12">
+                                <label for="example">Comments : <span class="has-error">*</span></label>
+                                <textarea class="form-control" rows="3" style="border:1px solid #ccc; box-shadow: 0 0 1px #ccc;"></textarea>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="example">Enter the code mentioned below :<span class="has-error">*</span></label>
+                                    <input type="name" class="form-control">
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="form-group col-md-6">
+                                	<button type="submit" class="btn btn-default">Submit</button>
+                                </div>
+                                </form>
+                                
+                            </div>-->
+                                
+                          </div>
+                           <div class="clearfix"></div>
+                         </div> 
+                         <div class="clearfix"></div>
+                                                   
+                     </div>
+                </div><!--/.row-->
+            </div><!--/.box-->
+        </div><!--/.container-->
+        </div>
+    </section>
+		<!-- footer -->
+       <div class="container-fluid footer_bg">
+     	<div class="container">
+        	<div class="row">
+            	<div class="footer">
+                	<div class="copy_rights col-md-6">
+                    	<p>© Copy Rights Reserved 2011. Designed and Maintained By <a href="#" target="_blank"><i>NJVS Technologies</i></a></p>
+                    </div>
+                    <div class="social_icon col-md-6 col-sm-12">
+                    	<div class="foot_menu">
+                        	<ul class="foot_navs">
+                            	<li><a href="#">Home</a></li>
+                                <li><a href="#">AboutUs</a></li>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">Trainings</a></li>
+                            </ul>
+                        </div>
+                    	<ul class="s_icons">
+                        	<li><a href="https://www.facebook.com/" target="_blank">f</a></li>
+                            <li><a href="https://www.youtube.com/" target="_blank">y</a></li>
+                            <li><a href="https://www.google.co.in/" target="_blank">g</a></li>
+                            <li><a href="https://twitter.com/" target="_blank">t</a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+     </div>
+	<!-- jQuery 1.11.1 -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
+
+     <!-- scroll header fixed -->
+    <script type="text/javascript">
+		$('#header').scrollToFixed();
+	</script>
+		<!--slider-->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>	 		
+		<script type="text/javascript" src="js/jquery.cslider.js"></script>
+		<script type="text/javascript" src="js/modernizr.custom.28468.js"></script>
+		<script type="text/javascript">
+		
+			$(function() {
+			
+				$('#da-slider').cslider({
+					autoplay	: true,
+					bgincrement	: 450
+				});
+			});
+		</script>
+     <!-- tap menu -->
+    <script>
+  // Hiding the panel content. If JS is inactive, content will be displayed
+  $( '.panel-content' ).hide();
+
+  // Preparing the DOM
+  
+  // -- Update the markup of accordion container 
+  $( '.accordion' ).attr({
+    role: 'tablist',
+    multiselectable: 'true'
+   });
+
+  // -- Adding ID, aria-labelled-by, role and aria-labelledby attributes to panel content
+  $( '.panel-content' ).attr( 'id', function( IDcount ) { 
+    return 'panel-' + IDcount; 
+  });
+  $( '.panel-content' ).attr( 'aria-labelledby', function( IDcount ) { 
+    return 'control-panel-' + IDcount; 
+  });
+  $( '.panel-content' ).attr( 'aria-hidden' , 'true' );
+  // ---- Only for accordion, add role tabpanel
+  $( '.accordion .panel-content' ).attr( 'role' , 'tabpanel' );
+  
+  // -- Wrapping panel title content with a <a href="">
+  $( '.panel-title' ).each(function(i){
+    
+    // ---- Need to identify the target, easy it's the immediate brother
+    $target = $(this).next( '.panel-content' )[0].id;
+    
+    // ---- Creating the link with aria and link it to the panel content
+    $link = $( '<a>', {
+      'href': '#' + $target,
+      'aria-expanded': 'false',
+      'aria-controls': $target,
+      'id' : 'control-' + $target
+    });
+    
+    // ---- Output the link
+    $(this).wrapInner($link);  
+    
+  });
+
+  // Optional : include an icon. Better in JS because without JS it have non-sense.
+  $( '.panel-title a' ).append('<span class="icon">+</span>');
+
+  // Now we can play with it
+  $( '.panel-title a' ).click(function() {
+    
+    if ($(this).attr( 'aria-expanded' ) == 'false'){ //If aria expanded is false then it's not opened and we want it opened !
+      
+      // -- Only for accordion effect (2 options) : comment or uncomment the one you want
+      
+      // ---- Option 1 : close only opened panel in the same accordion
+      //      search through the current Accordion container for opened panel and close it, remove class and change aria expanded value
+      $(this).parents( '.accordion' ).find( '[aria-expanded=true]' ).attr( 'aria-expanded' , false ).removeClass( 'active' ).parent().next( '.panel-content' ).slideUp(200).attr( 'aria-hidden' , 'true');
+
+      // Option 2 : close all opened panels in all accordion container
+      //$('.accordion .panel-title > a').attr('aria-expanded', false).removeClass('active').parent().next('.panel-content').slideUp(200);
+      
+      // Finally we open the panel, set class active for styling purpos on a and aria-expanded to "true"
+      $(this).attr( 'aria-expanded' , true ).addClass( 'active' ).parent().next( '.panel-content' ).slideDown(200).attr( 'aria-hidden' , 'false');
+
+    } else { // The current panel is opened and we want to close it
+
+      $(this).attr( 'aria-expanded' , false ).removeClass( 'active' ).parent().next( '.panel-content' ).slideUp(200).attr( 'aria-hidden' , 'true');;
+
+    }
+    // No Boing Boing
+    return false;
+  });
+</script>
+    <script type="text/javascript">
+    
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-36251023-1']);
+      _gaq.push(['_setDomainName', 'jqueryscript.net']);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    
+    </script>
+    <!-- circle hover -->
+    <script type="text/javascript">
+(function(){
+	var ul=$("#navs1"),li=$("#navs1 li"),i=li.length,n=i-1,r=120;
+	ul.click(function(){
+		$(this).toggleClass('active');
+		if($(this).hasClass('active')){
+			for(var a=0;a<i;a++){
+				li.eq(a).css({
+					'transition-delay':""+(50*a)+"ms",
+					'-webkit-transition-delay':""+(50*a)+"ms",
+					'left':(r*Math.cos(180/n*a*(Math.PI/120))),
+					'top':(-r*Math.sin(180/n*a*(Math.PI/120)))	
+				});
+			}
+		}else{
+			li.removeAttr('style');
+		}
+	});
+})($);
+</script>
+    <!-- imgslider -->
+    <script src="docs.min.js"></script>
+    <script src="ie10-viewport-bug-workaround.js"></script>
+    <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
+    <script>
+
+        jQuery(document).ready(function ($) {
+            var options = {
+                $AutoPlay: true,                                    
+                $AutoPlaySteps: 1,                                  
+                $AutoPlayInterval: 2000,                            
+                $PauseOnHover: 1,                                   
+                $ArrowKeyNavigation: true,   			            
+                $SlideEasing: $JssorEasing$.$EaseOutQuint,          
+                $SlideDuration: 800,                                
+                $MinDragOffsetToSlide: 20,                          
+                $SlideSpacing: 0, 					                
+                $DisplayPieces: 1,                                  
+                $ParkingPosition: 0,                                
+                $UISearchMode: 1,                                   
+                $PlayOrientation: 1,                                
+                $DragOrientation: 1,                                
+                $ArrowNavigatorOptions: {                           
+                    $Class: $JssorArrowNavigator$,                 
+                    $ChanceToShow: 2,                               
+                    $AutoCenter: 2,                                 
+                    $Steps: 1,                                      
+                    $Scale: false                                   
+                },
+
+                $BulletNavigatorOptions: {                                
+                    $Class: $JssorBulletNavigator$,                       
+                    $ChanceToShow: 2,                               
+                    $AutoCenter: 1,                                 
+                    $Steps: 1,                                      
+                    $Lanes: 1,                                      
+                    $SpacingX: 12,                                   
+                    $SpacingY: 4,                                  
+                    $Orientation: 1,                               
+                    $Scale: false                                   
+                }
+            };
+
+            $("#slider1_container").css("display", "block");
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+            function ScaleSlider() {
+                var parentWidth = jssor_slider1.$Elmt.parentNode.clientWidth;
+                if (parentWidth) {
+                    jssor_slider1.$ScaleWidth(parentWidth - 30);
+                }
+                else
+                    window.setTimeout(ScaleSlider, 30);
+            }
+            ScaleSlider();
+
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+        });
+    </script>
+
+	<!--/imgslider-->
+</body>
+</html>
